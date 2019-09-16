@@ -1,0 +1,24 @@
+input {
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.jumbotron {
+  background-color: #fff;
+}
+
+.register-btn {
+  width: 100%;
+  background-color: #4eaf4c;
+  border: 1px solid #4eaf4c;
+  height: 53px;
+  border-radius: 50px;
+  font-size: 20px;
+  &:hover {
+    background-color: #166415;
+    border: 1px solid #166415;
+    cursor: pointer;
+  }
+}

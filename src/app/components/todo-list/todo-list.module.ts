@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
     TodoListRoutingModule,
     NgModule,
     FormsModule
-  ]
+  ],
+  providers: [],
+  exports: [TodoListComponent]
 })
 export class TodoListModule { }
