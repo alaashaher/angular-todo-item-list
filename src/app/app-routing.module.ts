@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { RegisterComponent } from './components/register/register.component';
 const routes: Routes = [
-  { path: 'TodoListComponent', component: TodoListComponent },
-  { path: 'RegisterComponent', component: RegisterComponent }
+  { path: 'TodoList', component: TodoListComponent },
+  { path: 'Register', component: RegisterComponent }
 ];
 
 @NgModule({
