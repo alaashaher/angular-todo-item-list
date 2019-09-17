@@ -4,10 +4,9 @@
     <nav class="col-9">
         <ul>
             <li><a [routerLink]="['/TodoList']" routerLinkActive="router-link-active" >HOME</a></li>
-            <!-- <li><a (click)="gotoItems()">ITEMS</a></li> -->
+            <li><a [routerLink]="['/ItemList']" routerLinkActive="router-link-active">ITEMS</a></li>
             <li><a [routerLink]="['/Register']" routerLinkActive="router-link-active" >RESGESTER</a></li>
         </ul>
     </nav>
 </header>
-<app-todo-list></app-todo-list>
-<!-- <app-register></app-register>  -->
+<router-outlet></router-outlet>

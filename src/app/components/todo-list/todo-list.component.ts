@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../interfaces/todo';
-
+import { TodoListProvider } from './todo-list.provider';
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
@@ -15,17 +15,18 @@ export class TodoListComponent implements OnInit {
   filter: string;
   anyRemainingModel: boolean;
 
-
-  constructor() { }
+  constructor(private todoListProvider: TodoListProvider) {
+    // this.todos = this.todoListProvider.TodoData;
+    // console.log(this.todos);
+  }
 
   ngOnInit() {
+    this.todoListProvider.ToDoFunction();
     this.anyRemainingModel = true;
-    this.filter = 'all';
     this.beforeEditCache = '';
     this.idForTodo = 4;
     this.todoTitle = '';
-    this.todos = [
-    ];
+    this.todos = [];
   }
   disableBtn(): boolean {
     let returnedValue: boolean;
@@ -60,8 +61,6 @@ export class TodoListComponent implements OnInit {
     if (todo.title.trim().length === 0) {
       todo.title = this.beforeEditCache;
     }
-
-    // this.anyRemainingModel = this.anyRemaining();
     todo.editing = false;
   }
 
@@ -74,11 +73,7 @@ export class TodoListComponent implements OnInit {
     this.todos = this.todos.filter(todo => todo.id !== id);
   }
 
-  todosFiltered(): Todo[] {
-    if (this.filter === 'all') {
-      return this.todos;
-    }
-
+  todosFunction(): Todo[] {
     return this.todos;
   }
 

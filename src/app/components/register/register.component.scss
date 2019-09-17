@@ -16,6 +16,7 @@ input {
   height: 53px;
   border-radius: 50px;
   font-size: 20px;
+
   &:hover {
     background-color: #166415;
     border: 1px solid #166415;
@@ -26,7 +27,21 @@ input {
 
 .row-form {
   width: 70%;
-  @media screen and (max-width:767px){
+
+  @media screen and (max-width:767px) {
     width: 100%;
+  }
+}
+
+.addPhot {
+  width: 129px;
+  height: 129px;
+  margin-left: 36%;
+  border: 1px solid #EEF;
+  border-radius: 50%;
+  padding-top: 38px;
+
+  &:hover {
+    cursor: pointer;
   }
 }
