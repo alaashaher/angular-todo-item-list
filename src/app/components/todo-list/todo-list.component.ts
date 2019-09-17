@@ -16,8 +16,6 @@ export class TodoListComponent implements OnInit {
   anyRemainingModel: boolean;
 
   constructor(private todoListProvider: TodoListProvider) {
-    // this.todos = this.todoListProvider.TodoData;
-    // console.log(this.todos);
   }
 
   ngOnInit() {
@@ -42,7 +40,7 @@ export class TodoListComponent implements OnInit {
       return;
     }
 
-    this.todos.push({
+    this.todoListProvider.TodoData.unshift({
       id: this.idForTodo,
       title: this.todoTitle,
       editing: false
@@ -70,11 +68,11 @@ export class TodoListComponent implements OnInit {
   }
 
   deleteTodo(id: number): void {
-    this.todos = this.todos.filter(todo => todo.id !== id);
+    this.todoListProvider.TodoData = this.todoListProvider.TodoData.filter(todo => todo.id !== id);
   }
 
   todosFunction(): Todo[] {
-    return this.todos;
+    return this.todoListProvider.TodoData;
   }
 
 }

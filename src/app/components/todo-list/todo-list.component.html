@@ -10,7 +10,7 @@
   </div>
 
   <div class="row ">
-    <div class="todo-item col-12" *ngFor="let todo of todosFunction()">
+    <div class="todo-item col-12" *ngFor="let todo of todoListProvider.TodoData">
       <div class="row row-div">
         <div class="todo-item-left col-9">
           <div class="todo-item-label" *ngIf="!todo.editing; else editingTodo">{{ todo.title }}</div>
