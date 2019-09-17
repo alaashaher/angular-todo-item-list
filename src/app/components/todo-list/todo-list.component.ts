@@ -60,6 +60,8 @@ export class TodoListComponent implements OnInit {
     if (todo.title.trim().length === 0) {
       todo.title = this.beforeEditCache;
     }
+
+    // this.anyRemainingModel = this.anyRemaining();
     todo.editing = false;
   }
 

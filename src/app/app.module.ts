@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { AutofocusModule } from 'angular-autofocus-fix';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 import { RegisterComponent } from './components/register/register.component';
@@ -18,7 +18,8 @@ import { RegisterComponent } from './components/register/register.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AutofocusModule
   ],
   providers: [],
   bootstrap: [AppComponent]

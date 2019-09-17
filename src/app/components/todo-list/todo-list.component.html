@@ -11,11 +11,25 @@
 
   <div class="row ">
     <div class="todo-item col-12" *ngFor="let todo of todosFiltered()">
-      <div class="todo-item-left">
-        <div class="todo-item-label">{{ todo.title }}</div>
-      </div>
-      <div class="remove-item" (click)="deleteTodo(todo.id)">
-        &times;
+      <div class="row row-div">
+        <div class="todo-item-left col-9">
+          <div class="todo-item-label" *ngIf="!todo.editing; else editingTodo">{{ todo.title }}</div>
+          <ng-template #editingTodo>
+
+            <input type="text" class="todo-item-edit" [(ngModel)]="todo.title" (blur)="doneEdit(todo)" (keyup.enter)="doneEdit(todo)" (keyup.esc)="cancelEdit(todo)" autofocus>
+          </ng-template>
+
+        </div>
+        <div class="col-3">
+          <div class="row row-div">
+            <div class="remove-item col-6" (click)="editTodo(todo)">
+              <img src="https://img.icons8.com/material/24/000000/edit--v3.png">
+            </div>
+            <div class="remove-item col-6" (click)="deleteTodo(todo.id)">
+              <img src="https://img.icons8.com/material/24/000000/close-window--v1.png">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
