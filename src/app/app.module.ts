@@ -13,8 +13,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
 
 import { TodoListProvider } from './components/todo-list/todo-list.provider';
+import { ItemListProvider } from './components/item-list/item-list.provider';
 import { HttpModule } from '@angular/http';
-
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +30,10 @@ import { HttpModule } from '@angular/http';
     ReactiveFormsModule,
     AutofocusModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    // NgbModule
   ],
-  providers: [TodoListProvider],
+  providers: [TodoListProvider, ItemListProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

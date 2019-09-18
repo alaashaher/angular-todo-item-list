@@ -1,3 +1,33 @@
-<p>
-  item-list works!
-</p>
+<div class="container">
+  <div class="row row-form">
+    <div class="col-lg-3 col-md-5 col-sm-12 cart" *ngFor="let item of itemListProvider.GroupOptions">
+      <div class="row-form row" (click)="OpenMoble(content,item.name,item.photo,item.specialist)">
+        <img src={{item.photo}} class="cart-photo col-5" />
+        <div class="col-7 cart-data">
+          {{item.name}} <span class="rate"><img src="https://img.icons8.com/color/50/000000/filled-star.png"
+              class="star"> {{item.rate}}</span>
+          <br>
+          <span class="specialist">{{item.specialist}}</span><br>
+          <a href={{item.location}} class="location"><img src="assets/image/location.png" width="20" />Fekerty
+            Online</a><br>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Hello, World!</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</ng-template>
