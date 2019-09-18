@@ -1,5 +1,56 @@
-.cart {
+.feedback {
+  color: rgb(31, 30, 30);
+  font-size: 20px;
+  margin-top: 22px;
 
+  .starFeed {
+    width: 50px;
+    margin-top: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .give {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 75px;
+    color: rgb(175, 174, 174);
+    border: 1px solid rgb(175, 174, 174);
+    resize: none;
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  .send-btn {
+    background-color: #0e791c;
+    border: 1px solid #0e791c;
+    border-radius: 50px;
+    margin: 22px 0px;
+  }
+
+  .feedback-data {
+    margin-left: 20px;
+    line-height: 27px;
+    margin-top: 44px;
+  }
+
+  .feedback-cart-photo {
+    width: 113px;
+    height: 124px;
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-left: 73px;
+  }
+}
+
+.cart {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(134, 134, 134, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(134, 134, 134, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(134, 134, 134, 0.75);
@@ -8,6 +59,9 @@
   padding: 16px 5px 10px 9px;
   margin: 37px 2px 15px 7%;
 
+  // @media screen {
+  //   margin: 37px 2px 15px 0%;
+  // }
 
   .cart-photo {
     width: 71px;
@@ -38,4 +92,9 @@
       color: #cccccc;
     }
   }
+}
+
+
+.specialist {
+  color: rgb(34, 180, 5);
 }

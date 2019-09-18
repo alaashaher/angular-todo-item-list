@@ -16,6 +16,8 @@ import { TodoListProvider } from './components/todo-list/todo-list.provider';
 import { ItemListProvider } from './components/item-list/item-list.provider';
 import { HttpModule } from '@angular/http';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {DialogModule} from 'primeng/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { HttpModule } from '@angular/http';
     AutofocusModule,
     HttpModule,
     HttpClientModule,
+    DialogModule
     // NgbModule
   ],
   providers: [TodoListProvider, ItemListProvider],

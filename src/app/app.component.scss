@@ -26,6 +26,11 @@
 a {
   text-decoration: none;
   color: black;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
 
   &:hover {
     text-decoration: none;
@@ -53,8 +58,9 @@ nav {
     display: inline-block;
     padding-right: 36px;
     font-family: Montserrat;
-    @media screen and (max-width:400px){
-        padding-right: 10px;
+
+    @media screen and (max-width:400px) {
+      padding-right: 10px;
     }
   }
 
