@@ -17,6 +17,7 @@ import { ItemListProvider } from './components/item-list/item-list.provider';
 import { HttpModule } from '@angular/http';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {DialogModule} from 'primeng/dialog';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {DialogModule} from 'primeng/dialog';
     AutofocusModule,
     HttpModule,
     HttpClientModule,
-    DialogModule
+    DialogModule,
+    BrowserAnimationsModule,
     // NgbModule
   ],
   providers: [TodoListProvider, ItemListProvider],

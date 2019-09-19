@@ -20,14 +20,14 @@ export class ItemListComponent implements OnInit {
     this.itemListProvider.ItemListFunction();
   }
 
-  showDialog() {
+  showDialog(name, photo, specialist) {
     this.display = true;
-  }
-  OpenMoble(content, name, photo, specialist) {
-    // this.modalService.open(content);
     this.name = name;
     this.photo = photo;
     this.specialist = specialist;
+  }
 
+  send() {
+    this.display = false;
   }
 }
