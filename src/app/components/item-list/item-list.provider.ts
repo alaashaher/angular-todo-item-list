@@ -28,7 +28,7 @@ export class ItemListProvider {
                     this.GroupOptions[i].specialist = 'eye specialist';
                     this.GroupOptions[i].rate = Math.floor(Math.random() * (10.00 - 1.00 + 1.00)) + 1.00;
                 }
-                console.log(this.GroupOptions);
+                // console.log(this.GroupOptions);
             });
     }
 

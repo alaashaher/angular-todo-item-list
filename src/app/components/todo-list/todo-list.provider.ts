@@ -18,7 +18,7 @@ export class TodoListProvider {
             delete Item.userId;
             Item.editing = false;
         });
-        console.log(this.TodoData);
+        // console.log(this.TodoData);
       });
     }
 
